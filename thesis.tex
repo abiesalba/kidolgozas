@@ -1,0 +1,90 @@
+\documentclass[
+	%parspace, % Térköz bekezdések közé / Add vertical space between paragraphs
+	%noindent, % Bekezdésének első sora ne legyen behúzva / No indentation of first lines in each paragraph
+	%nohyp, % Szavak sorvégi elválasztásának tiltása / No hyphenation of words
+	%twoside, % Kétoldalas nyomtatás / Double sided format
+	%draft, % Gyorsabb fordítás ábrák rajzolása nélkül / Quicker draft compilation without rendering images
+	%final, % Teendők elrejtése / Set final to hide todos
+]{elteikthesis}[2021/09/20]
+
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\usepackage{array,multirow}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+%FIGURES AND TABLES
+\usepackage{caption}
+\usepackage{graphicx}						
+\usepackage[section]{placeins}								
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{lipsum}  
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,%
+			keepaspectratio]{images/cover.png}%
+			\vfill
+}}}
+% A dolgozat
+% The document
+\begin{document}
+
+\AddToShipoutPicture*{\BackgroundPic}
+\begin{titlepage}
+	\AddToShipoutPicture*{\BackgroundPic}		
+	\centering
+	\begin{figure}[!h]
+		\begin{minipage}{0.2\textwidth}
+			\centering
+			\includegraphics[width=1.0\linewidth]{images/jaschik_logo}
+			\captionsetup{labelformat=empty}	
+			\caption{\centering}
+		\end{minipage}\hfill
+		\begin{minipage}{0.75\textwidth}
+			\centering			
+			{\scshape\LARGE\bfseries Jaschik Álmos Művészeti Szakgimnázium és Technikum\par}
+			\vspace{0.5cm}
+			{\scshape\bfseries\Large Képző- és iparművészeti munkatárs\\
+				- Festő\par}
+		\end{minipage}	
+		\captionsetup{labelformat=empty}
+	\end{figure}
+	\vspace{2.5cm}	
+	{\LARGE\bfseries Kidolgozott vizsgatételek\par}
+	\vspace{0.5cm}
+	{\Large Készítette:\par}
+	{\Large\itshape Csonka Szilvia\par}
+	{\large\itshape 2022, Budapest\par}
+	
+\end{titlepage}
+
+% Nyelv kiválasztása
+% Set document language
+\documentlang{magyar}
+%\documentlang{english}
+
+% Teendők listája (final dokumentumban nincs)
+% List of todos (not in the final document)
+%\listoftodos[\todolabel]
+
+% Tartalomjegyzék (kötelező)
+% Table of contents (mandatory)
+\tableofcontents
+\cleardoublepage
+
+% Tartalom
+% Main content
+\input{chapters/bevezetes.tex}
+\cleardoublepage
+
+\input{chapters/minta.tex}
+\cleardoublepage
+
+\input{chapters/forrasok.tex}
+\cleardoublepage
+
+\end{document}
