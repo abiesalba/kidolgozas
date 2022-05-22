@@ -6,7 +6,6 @@
 	%draft, % Gyorsabb fordítás ábrák rajzolása nélkül / Quicker draft compilation without rendering images
 	%final, % Teendők elrejtése / Set final to hide todos
 ]{elteikthesis}[2021/09/20]
-
 \usepackage{eso-pic}
 \usepackage{hyperref}
 \usepackage{array,multirow}
@@ -20,10 +19,10 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{lipsum}  
+\renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\chaptername}{tétel}
 \renewcommand{\thesection}{\Alph{section}} 
-
 \newcommand\BackgroundPic{%
 	\put(0,0){%
 		\parbox[b][\paperheight]{\paperwidth}{%
@@ -33,6 +32,8 @@
 			keepaspectratio]{images/cover.png}%
 			\vfill
 }}}
+
+\setcounter{chapter}{-1}
 % A dolgozat
 % The document
 \begin{document}
@@ -58,11 +59,10 @@
 		\captionsetup{labelformat=empty}
 	\end{figure}
 	\vspace{2.5cm}	
-	{\LARGE\bfseries Kidolgozott vizsgatételek\par}
-	\vspace{0.5cm}
-	{\Large Készítette:\par}
-	{\Large\itshape Csonka Szilvia\par}
-	{\large\itshape 2022, Budapest\par}
+	{\huge\bfseries Kidolgozott vizsgatételek\par}
+	\vfill
+	{\large Csonka Szilvia\par}
+	{\large 2022, Budapest\par}
 	
 \end{titlepage}
 

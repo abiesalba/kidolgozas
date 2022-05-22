@@ -59,6 +59,7 @@
 \else % other (PdfTex)
 	\RequirePackage[utf8]{inputenc}
 	\RequirePackage[T1]{fontenc}
+	\RequirePackage{tgadventor}
 \fi
 \RequirePackage[english,magyar]{babel}
 \RequirePackage{indentfirst}
