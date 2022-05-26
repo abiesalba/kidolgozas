@@ -12,8 +12,11 @@
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{hyperref}
+\usepackage[explicit]{titlesec}
 %FIGURES AND TABLES
 \usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{varwidth} \tcbuselibrary{skins}
 \usepackage{graphicx}						
 \usepackage[section]{placeins}								
 \usepackage{booktabs}
@@ -22,7 +25,10 @@
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\chaptername}{tétel}
-\renewcommand{\thesection}{\Alph{section}} 
+\renewcommand{\thesection}{\Alph{section}}
+ \newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
+\titleformat{\subsection}{\Large\bfseries}{\thesubsection. }{0em}{#1\,\raisedrulefill[0.4ex]{2pt}}
+
 \newcommand\BackgroundPic{%
 	\put(0,0){%
 		\parbox[b][\paperheight]{\paperwidth}{%
@@ -33,11 +39,11 @@
 			\vfill
 }}}
 
-\setcounter{chapter}{-1}
+\setcounter{chapter}{-1} 
 % A dolgozat
 % The document
 \begin{document}
-
+	
 \AddToShipoutPicture*{\BackgroundPic}
 \begin{titlepage}
 	\AddToShipoutPicture*{\BackgroundPic}		
