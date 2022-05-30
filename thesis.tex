@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{hyperref}
+\usepackage{dashrule}
 \usepackage[explicit]{titlesec}
 %FIGURES AND TABLES
 \usepackage{caption}
@@ -22,12 +23,15 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{lipsum}
+
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\chaptername}{tétel}
 \renewcommand{\thesection}{\Alph{section}}
  \newcommand{\raisedrulefill}[2][0ex]{\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill}
 \titleformat{\subsection}{\Large\bfseries}{\thesubsection. }{0em}{#1\,\raisedrulefill[0.4ex]{2pt}}
+
+\titleformat{\subsubsection}{\large\bfseries}{\thesubsubsection. }{0em}{#1\,\hdashrule[0.5ex]{\fill}{1pt}{3mm}}
 
 \newcommand\BackgroundPic{%
 	\put(0,0){%
